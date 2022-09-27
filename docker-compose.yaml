@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db: 
+    image: postgres:14.3
+    restart: always
+    ports: 
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: Password
+      POSTGRES_DB: Edimcadb
+    container_name: edimcadb
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
